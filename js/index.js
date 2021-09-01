@@ -2,10 +2,10 @@ let modeloId = '';
 
 //get Informacion del pedido
 $(window).load(function () {
-    let test = "MywgTWVjYW5pbmNvMSBQZXJleiwgTGltcGllemEgZGUgdGFwYXM=";  
-    let token = window.location.search;
-    console.log(token);
-    let TokenHash = atob(test);
+      
+    let token = getToken();
+    
+    let TokenHash = atob(token);
 
     //Mostramos los valores en consola:
     let expresionRegular = /\s*,\s*/;
@@ -47,4 +47,16 @@ function send(rating , comentary) {
           
     });
 
+}
+
+function getToken(){
+
+    let loc = window.location.href;
+
+    if(loc.indexOf('?')>0)
+    {
+        let Token = loc.split('?')[1];
+        
+        return(Token);
+    }
 }
