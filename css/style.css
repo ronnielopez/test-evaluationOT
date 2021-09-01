@@ -1,0 +1,74 @@
+
+body{
+    background-color: #071a29;
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    color: #fff;
+}
+
+.icon{
+    font-size: 5rem;
+}
+
+.star-rating {
+    font-family: 'FontAwesome';
+    margin: 50px auto;
+  }
+  .star-rating > fieldset {
+    border: none;
+    display: inline-block;
+  }
+  .star-rating > fieldset:not(:checked) > input {
+    position: absolute;
+    top: -9999px;
+    clip: rect(0, 0, 0, 0);
+  }
+  .star-rating > fieldset:not(:checked) > label {
+    float: right;
+    width: 1em;
+    padding: 0 0.05em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 3.5rem;
+    color: #888888f3;
+  }
+  .star-rating > fieldset:not(:checked) > label:before {
+    content: '\f006  ';
+  }
+  .star-rating > fieldset:not(:checked) > label:hover,
+  .star-rating > fieldset:not(:checked) > label:hover ~ label {
+    color: #f1e101;
+    text-shadow: 0 0 3px #f1e101;
+  }
+  .star-rating > fieldset:not(:checked) > label:hover:before,
+  .star-rating > fieldset:not(:checked) > label:hover ~ label:before {
+    content: '\f005  ';
+  }
+  .star-rating > fieldset > input:checked ~ label:before {
+    content: '\f005  ';
+    color: #f1e101;
+  }
+  .star-rating > fieldset > label:active {
+    position: relative;
+    top: 2px;
+  }
+
+
+.p-inputArea{
+    padding: 30px 150px 10px 150px;
+
+}
+
+@media (max-width: 480px) {
+    .p-inputArea{
+        padding: 0px 20px 0px 20px !important;    
+    }
+
+}
+
+.btn-lg{
+  font-size: 1.5rem;
+  color: #fff !important;
+  border-color: #fff;
+}
+
